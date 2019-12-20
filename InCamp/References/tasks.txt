@@ -1,0 +1,12 @@
+0930 hours to 1200 hours
+1- make website start open page/refer tumblr
+2- signup process
+3- placeholder based user profile page
+4- algorithm base that is active
+
+1200 hours to 1700/1800 hrs
+1-apply algorithm
+2-implement events and maps
+3-recommended learning style menus and 
+4-explain how feedback/controlling part takes place
+5-shivam do django

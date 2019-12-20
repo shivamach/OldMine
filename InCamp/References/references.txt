@@ -1,0 +1,25 @@
+Learning References : 
+
+Learning Django - https://docs.djangoproject.com/en/2.1/intro/tutorial01/
+Building a CRUD application with Flask - https://www.codementor.io/garethdwyer/building-a-crud-application-with-flask-and-sqlalchemy-dm3wv7yu2
+Twitter Bootstrap Tutorial - https://www.w3schools.com/bootstrap4/
+Basic Python tutorial : https://docs.python.org/3/tutorial/index.html
+Google Python Class ; https://developers.google.com/edu/python/
+
+Framework/tool Website:
+Django website : https://www.djangoproject.com/
+Flask Website : http://flask.pocoo.org/
+SQL Alchemy (ORM) : https://www.sqlalchemy.org/
+Twitter Bootstrap : https://getbootstrap.com/
+
+We have to complete the following in the coming week
+
+    Go through the tutorials. 
+    Decide which web framework you want to use (Django/Flask/something else)
+    Mindmap potential solutions for your problem. Decide on features and which features you want to implement (prioritize)
+    Create page mockups with workflow (e.g. how the first page will look like, what happens when user clicks on a button, how the next page looks like what is the 'user's journey in your website etc).  
+    Check this article on 'paper prototyping' a website https://medium.com/digital-experience-design/a-guide-to-paper-prototyping-testing-for-web-interfaces-49e542ba765f See if you can do something similar (Its ok if you decide not to do it this way)
+
+All your documents/mindmaps/prototypes/experiments must be in Git so that I can check and help you in case of any problems.
+	
+

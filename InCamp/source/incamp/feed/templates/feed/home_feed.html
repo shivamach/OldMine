@@ -1,0 +1,27 @@
+{% extends "feed/base.html" %}
+{% block content %}
+    {% for events in event%}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ events.author }}</a>
+              <small class="text-muted">{{ events.date_posted|date:"F d, Y" }}</small>
+            </div>
+            {% if object.author == user %}
+              <div>
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href= "#">Update</a>
+              </div>
+            {% endif %}
+            <h2><a class="article-title" href="{% url 'event-detail' events.id %}">{{ events.title }}</a></h2>
+            <p class="article-content">{{ events.content|truncatechars:200}}</p>
+
+
+            {%for tag in events.tags.names%}
+              <tr class="{% cycle 'row1' 'row2' %}">
+              <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{%url 'event-tagsview' tag%}">{{tag}}</a>
+            </tr>
+            {% endfor %}
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

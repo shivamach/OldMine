@@ -1,0 +1,15 @@
+{% extends "feed/base.html" %}
+{% block content %}
+    {% for events in event%}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ events.author }}</a>
+              <small class="text-muted">{{ events.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ events.title }}</a></h2>
+            <p class="article-content">{{ events.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}

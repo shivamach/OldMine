@@ -1,0 +1,37 @@
+{% extends "users/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ profile.image.url }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ profile.user.username }}</h2>
+          <p class="text-secondary">{{ profile.user.email }}</p>
+          {%with learning_style=profile.classification %}
+          <h4><i>You are {{learning_style.0}} with {{learning_style.1}} % confidence</i></h4>
+
+          {%endwith%}
+
+          {%for tag in profile.tags.names %}
+            <tr class="{% cycle 'row1' 'row2' %}">
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{%url 'event-tagsview' tag%}">{{tag}}</a>
+          </tr>
+          {% endfor %}
+
+        </div>
+      </div>
+      <!-- FORM HERE -->
+
+
+      <form method="POST">
+          {% csrf_token %}
+          <fieldset class="form-group">
+              <legend class="border-bottom mb-4">Intrests</legend>
+              {{ form|crispy }}
+          </fieldset>
+          <div class="form-group">
+              <button class="btn btn-outline-info" type="submit">Save</button>
+          </div>
+      </form>
+    </div>
+{% endblock content %}
